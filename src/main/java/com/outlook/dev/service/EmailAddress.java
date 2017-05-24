@@ -9,7 +9,15 @@ public class EmailAddress {
 	private String name;
 	@JsonProperty("Address")
 	private String address;
-	
+
+	public EmailAddress() {
+	}
+
+	public EmailAddress(String name, String address) {
+		this.name = name;
+		this.address = address;
+	}
+
 	public String getName() {
 		return name;
 	}
