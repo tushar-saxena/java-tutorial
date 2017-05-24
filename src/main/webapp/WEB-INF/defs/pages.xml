@@ -22,7 +22,19 @@
     <put-attribute name="body" value="/WEB-INF/jsp/events.jsp" />
     <put-attribute name="current" value="events" />
   </definition>
-  
+
+  <definition name="findMeetingTimes" extends="common">
+    <put-attribute name="title" value="Find Meeting Times" />
+    <put-attribute name="body" value="/WEB-INF/jsp/findMeetingTimes.jsp" />
+    <put-attribute name="current" value="findMeetingTimes" />
+  </definition>
+
+  <definition name="searchMeetingTimes" extends="common">
+    <put-attribute name="title" value="searchMeetingTimes" />
+    <put-attribute name="body" value="/WEB-INF/jsp/process.jsp" />
+    <put-attribute name="current" value="process" />
+  </definition>
+
   <definition name="contacts" extends="common">
     <put-attribute name="title" value="My Contacts" />
     <put-attribute name="body" value="/WEB-INF/jsp/contacts.jsp" />

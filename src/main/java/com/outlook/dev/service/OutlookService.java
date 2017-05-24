@@ -1,9 +1,7 @@
 package com.outlook.dev.service;
 
 import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
+import retrofit2.http.*;
 
 public interface OutlookService {
 	
@@ -24,6 +22,10 @@ public interface OutlookService {
 	  @Query("$select") String select,
 	  @Query("$top") Integer maxResults
 	);
+
+	@Headers("Prefer: outlook.timezone=\"India Standard Time\"")
+	@POST("/api/v2.0/me/findmeetingtimes")
+	Call<FindMeetingResponse> findMeetingTimes(@Body FindMeetingRequest body);
 	
 	@GET("/api/v2.0/me/contacts")
 	Call<PagedResult<Contact>> getContacts(
