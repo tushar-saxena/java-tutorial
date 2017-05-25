@@ -18,13 +18,16 @@ public class AuthHelper {
 	private static final String authority = "https://login.microsoftonline.com";
 	private static final String authorizeUrl = authority + "/common/oauth2/v2.0/authorize";
 	
-	private static String[] scopes = { 
-		"openid", 
-		"offline_access",
-		"profile", 
-		"https://outlook.office.com/mail.read",
-		"https://outlook.office.com/calendars.read",
-		"https://outlook.office.com/contacts.read"
+	private static String[] scopes = {
+	        "openid",
+            "offline_access",
+            "profile",
+            "https://outlook.office.com/mail.read",
+            "https://outlook.office.com/calendars.read",
+            "https://outlook.office.com/contacts.read",
+            "https://outlook.office.com/calendars.readwrite",
+            "https://outlook.office.com/calendars.read.shared",
+            "https://outlook.office.com/calendars.readwrite.shared"
 	};
 	
 	private static String appId = null;
